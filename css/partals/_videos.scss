@@ -1,0 +1,114 @@
+#videos {
+  .container {
+    max-width: rem(1000);
+    padding: 0;
+  }
+
+  .video-loop {
+    display: flex;
+    margin-bottom: rem(40);
+    position: relative;
+
+    @include md-down {
+      display: block;
+      margin-bottom: rem(20);
+      text-align: center;
+    }
+
+    .media-responsive {
+      max-width: 100%;
+      padding-bottom: 38.3%;
+      width: rem(785);
+      z-index: 1;
+
+      @include md-down {
+        margin: 0 auto;
+        padding-bottom: 56.25%;
+      }
+
+      video {
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .video-meta {
+      background-color: $black;
+      padding: rem(15) rem(65);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      @include md-down {
+        display: inline-block;
+        margin: 0 rem(10);
+        padding: rem(15) rem(25);
+        position: relative;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        transform: translateY(-10%);
+      }
+
+      h3 {
+        font-family: $secondary-font-stack;
+        font-size: rem(44);
+        font-weight: normal;
+        text-transform: uppercase;
+
+        @include md-down {
+          font-size: rem(38);
+          text-align: right;
+        }
+      }
+
+      h4 {
+        font-size: rem(16);
+        font-weight: normal;
+        margin-bottom: rem(30);
+        text-transform: uppercase;
+
+        @include md-down {
+          text-align: right;
+        }
+
+        @include sm-down {
+          margin-bottom: rem(20);
+        }
+      }
+
+      a {
+        display: block;
+
+        .underline {
+          margin-left: rem(10);
+          text-decoration: underline;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &:nth-of-type(odd) {
+      justify-content: flex-start;
+
+      .video-meta {
+        right: rem(-50);
+      }
+
+      a {
+        text-align: right;
+      }
+    }
+
+    &:nth-of-type(even) {
+      justify-content: flex-end;
+
+      .video-meta {
+        left: rem(-50);
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+#gradient {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -5;
+}
+
+@include md-up {
+  .animated {
+    visibility: hidden;
+
+    &.in-view {
+      visibility: visible;
+    }
+  }
+}
+
+@include md-down {
+  [data-jarallax-element] {
+    transform: none !important;
+  }
+}
+
+#main {
+  position: relative;
+  z-index: 998;
+}

@@ -1,0 +1,7 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: rem($base-font-size);
+  line-height: $base-line-height;
+  overflow-x: hidden;
+}

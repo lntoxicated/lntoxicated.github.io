@@ -1,0 +1,146 @@
+#tour {
+  .container {
+    max-width: rem(1100);
+    position: relative;
+
+    > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      @include md-down {
+        padding-right: rem(60);
+        position: relative;
+        transform: translate(rem(-5), -10%) !important;
+        z-index: 5;
+      }
+    }
+  }
+
+  #events {
+    background-color: $black;
+    margin: 0 0 0 auto;
+    max-width: 100%;
+    padding: rem(50) rem(65) rem(50) rem(80);
+    position: relative;
+    text-transform: uppercase !important;
+    width: rem(705);
+    z-index: 2;
+
+    @include md-down {
+      margin: rem(20) 0 0;
+      padding: rem(25) rem(20) rem(100) rem(25);
+      transform: none;
+      width: 100%;
+    }
+
+    h3 {
+      font-family: $secondary-font-stack;
+      font-size: rem(44);
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-weight: normal;
+      margin-bottom: rem(45);
+      text-align: right;
+    }
+  }
+
+  .seated-event-row {
+    padding: rem(15) 0;
+
+    @include sm-down {
+      text-align: right;
+    }
+
+    .seated-event-description-cells,
+    .seated-event-link-cells {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .seated-event-description-cells {
+      width: calc(64% - .25rem);
+
+      @include sm-down {
+        width: 100%;
+      }
+
+      .seated-event-date-cell {
+        display: inline-block;
+        font-family: $secondary-font-stack;
+        font-size: rem(18);
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        padding-right: rem(10);
+        vertical-align: top;
+        width: calc(30% - .25rem);
+
+        @include sm-down {
+          margin-bottom: rem(10);
+          padding: 0;
+          width: 100%;
+        }
+      }
+
+      .seated-event-venue-cell {
+        display: inline-block;
+        padding: 0 rem(10);
+        vertical-align: top;
+        width: calc(70% - .25rem);
+
+        @include sm-down {
+          padding: 0;
+          width: 100%;
+        }
+
+        .seated-event-venue-name {
+          display: block;
+          font-family: $secondary-font-stack;
+          font-size: rem(18);
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        .seated-event-venue-location {
+          display: block;
+          font-family: $primary-font-stack;
+          font-size: rem(16);
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+          font-weight: 100;
+          margin-top: rem(7);
+        }
+      }
+
+      .seated-event-details-cell {
+        display: none;
+      }
+    }
+
+    .seated-event-link-cells {
+      width: calc(36% - .25rem);
+
+      @include sm-down {
+        margin-top: rem(20);
+        width: 100%;
+      }
+
+      > div {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      a, a:link, a:visited {
+        display: inline-block;
+        font-family: $primary-font-stack;
+        font-size: rem(14);
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 100;
+        margin-bottom: rem(10);
+        padding: rem(5) rem(15) rem(3);
+        vertical-align: top;
+      }
+    }
+  }
+}

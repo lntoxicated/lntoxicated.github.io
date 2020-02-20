@@ -1,0 +1,110 @@
+#menu-toggle {
+  border-bottom: rem(1) solid $white;
+  display: none;
+  font-family: $secondary-font-stack;
+  font-size: rem(18);
+  padding-bottom: rem(5);
+  position: relative;
+  z-index: 2;
+
+  @include md-down {
+    display: inline-block;
+  }
+
+  &:active, &:focus, &:hover {
+    color: $white;
+  }
+}
+
+#menu {
+  @include md-up {
+    align-items: center;
+    display: flex;
+  }
+
+  @include md-down {
+    background-color: rgba(0, 0, 0, .8);
+    display: inline-block;
+    max-width: none;
+    padding: rem(75) rem(25) rem(40) rem(20);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform .5s;
+    width: auto;
+    z-index: 1;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}
+
+nav {
+  flex: 1;
+
+  @include md-down {
+    display: block;
+    margin-bottom: rem(15);
+  }
+
+  ul {
+    text-align: left;
+
+    li {
+      display: inline-block;
+
+      @include md-down {
+        display: block;
+      }
+
+      a,
+      a:link,
+      a:visited {
+        display: block;
+        font-family: $secondary-font-stack;
+        font-size: rem(21);
+        padding: rem(5);
+        position: relative;
+        text-transform: uppercase;
+        top: rem(3);
+
+        @include md-down {
+          font-size: rem(20);
+          padding: rem(15) 0;
+        }
+      }
+
+      @include lg-up {
+        + li {
+          a,
+          a:link,
+          a:visited {
+            margin-left: rem(55);
+          }
+        }
+      }
+
+      @include lg-down {
+        + li {
+          a,
+          a:link,
+          a:visited {
+            margin-left: rem(40);
+          }
+        }
+      }
+
+      @include md-down {
+        + li {
+          a,
+          a:link,
+          a:visited {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

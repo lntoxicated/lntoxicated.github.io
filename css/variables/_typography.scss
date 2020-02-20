@@ -1,0 +1,23 @@
+// The font size set on the root html element.
+$base-font-size: 16;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 1;
+
+// The font sizes for h1-h6.
+$h1-font-size: 60;
+$h2-font-size: 50;
+$h3-font-size: 42;
+$h4-font-size: 30;
+$h5-font-size: 22;
+$h6-font-size: 14;
+
+// Primary Font
+$primary-fallback-font-stack: Helvetica, Arial, sans-serif;
+$primary-font: proxima-nova;
+$primary-font-stack: $primary-font, $primary-fallback-font-stack;
+
+// Secondary Font
+$secondary-fallback-font-stack: Garamond, "Times New Roman", serif;
+$secondary-font: Ogg;
+$secondary-font-stack: $secondary-font, $secondary-fallback-font-stack;

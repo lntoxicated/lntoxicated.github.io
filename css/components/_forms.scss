@@ -1,0 +1,37 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="month"],
+input[type="time"],
+input[type="url"],
+input[type="tel"],
+input[type="week"],
+select,
+textarea {
+  color: $primary-text-color;
+  font-family: $primary-font-stack;
+  line-height: 1;
+}
+
+textarea {
+  line-height: $base-line-height;
+}
+
+::-moz-placeholder {
+  color: $placeholder-color;
+}
+
+:-moz-placeholder {
+  color: $placeholder-color;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-color;
+}
+
+::-webkit-input-placeholder {
+  color: $placeholder-color;
+}

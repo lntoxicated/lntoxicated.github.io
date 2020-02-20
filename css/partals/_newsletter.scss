@@ -1,0 +1,63 @@
+.newsletter {
+  display: inline-block;
+  vertical-align: middle;
+
+  [type="email"] {
+    background: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: rem(1) solid $white;
+    color: $white;
+    display: inline-block;
+    font-family: $primary-font-stack;
+    font-size: rem(12);
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    max-width: 100%;
+    padding: 0 0 rem(5);
+    vertical-align: bottom;
+    width: rem(240);
+
+    @include xs-down {
+      width: rem(200);
+    }
+
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white;
+    }
+
+    &:-moz-placeholder {
+      color: $white;
+    }
+  }
+
+  .thanks {
+    font-size: rem(14);
+    margin-left: rem(15);
+  }
+}
+
+#header {
+  .newsletter {
+    [type="email"] {
+      max-width: rem(160);
+
+      @include md-down {
+        max-width: rem(115);
+      }
+    }
+
+    .btn {
+      font-family: $secondary-font-stack;
+      font-weight: normal;
+    }
+  }
+}

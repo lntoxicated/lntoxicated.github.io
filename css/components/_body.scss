@@ -1,0 +1,9 @@
+body {
+  background-color: $black;
+  color: $primary-text-color;
+  font-family: $primary-font-stack;
+  font-weight: normal;
+  font-size: rem(16);
+  line-height: $base-line-height;
+  overflow: hidden;
+}

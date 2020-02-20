@@ -1,0 +1,113 @@
+#hero {
+  margin-bottom: rem(225);
+  position: relative;
+  z-index: 9;
+
+  @include md-down {
+    margin-bottom: rem(-50);
+    margin-top: rem(50);
+  }
+
+  .container {
+    max-width: rem(950);
+    padding: 0;
+    position: relative;
+
+    @include md-down {
+      text-align: center;
+    }
+  }
+
+  #title {
+    padding: 0 rem(15);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    text-align: right;
+    transform: translateY(-50%);
+
+    @include md-down {
+      position: static;
+      text-align: center;
+      transform: translateY(-40%);
+    }
+
+    > img {
+      display: block;
+      margin-bottom: rem(30);
+
+      @include md-down {
+        margin: 0 auto rem(30);
+      }
+
+      &:nth-of-type(1) {
+        padding-left: 2%;
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding-bottom: 10px;
+      position: relative;
+      text-align: right;
+
+      @include md-down {
+        text-align: center;
+      }
+
+      svg {
+        display: inline-block;
+        max-width: rem(110);
+
+        path {
+          fill: $primary-color
+        }
+      }
+
+      &:after {
+        background-color: $primary-color;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        right: 0;
+        transition: width .3s;
+        width: 137px;
+
+        @media screen and (max-width: 767px) {
+          left: 50%;
+          right: auto;
+          transform: translateX(-50%);
+        }
+      }
+
+      &:active,
+      &:hover,
+      &:focus {
+        &:after {
+          width: rem(65);
+        }
+      }
+    }
+  }
+
+  .mobile {
+    display: none !important;
+  }
+
+  @include md-down {
+    .desktop {
+      display: none !important;
+    }
+
+    .mobile {
+      display: block !important;
+      padding: 0 rem(15);
+      position: absolute;
+      left: 50%;
+      top: rem(15);
+      transform: translateX(-50%);
+    }
+  }
+}

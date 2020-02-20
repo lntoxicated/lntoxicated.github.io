@@ -1,0 +1,11 @@
+a,
+a:link,
+a:visited {
+  color: $primary-text-color;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $primary-color;
+  }
+}
